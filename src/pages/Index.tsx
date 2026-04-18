@@ -8,6 +8,8 @@ import { Ticker } from "@/components/cricpulse/Ticker";
 import { OracleCard } from "@/components/cricpulse/OracleCard";
 import { DenActivity } from "@/components/cricpulse/DenActivity";
 import { LiveMoments } from "@/components/cricpulse/LiveMoments";
+import { EmotionStadium } from "@/components/cricpulse/EmotionStadium";
+import { SentimentDuel } from "@/components/cricpulse/SentimentDuel";
 import { INITIAL_ROASTS, NEW_ROAST_POOL } from "@/components/cricpulse/data";
 import type { Faction, Roast } from "@/components/cricpulse/types";
 
@@ -80,6 +82,12 @@ const Index = () => {
           </div>
           <FactionToggle faction={faction} onChange={setFaction} />
         </section>
+
+        {/* HERO: Emotion Stadium — see the crowd react */}
+        <EmotionStadium />
+
+        {/* HERO: Sentiment Duel — RCB vs DC live emotional war */}
+        <SentimentDuel faction={faction} />
 
         {/* Den Activity ticker */}
         <DenActivity faction={faction} />
