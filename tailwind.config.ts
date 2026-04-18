@@ -13,7 +13,36 @@ export default {
       },
     },
     extend: {
+      fontFamily: {
+        display: ['Space Grotesk', 'system-ui', 'sans-serif'],
+        body: ['Inter', 'system-ui', 'sans-serif'],
+        mono: ['JetBrains Mono', 'monospace'],
+      },
       colors: {
+        rcb: {
+          DEFAULT: "hsl(var(--rcb))",
+          glow: "hsl(var(--rcb-glow))",
+          deep: "hsl(var(--rcb-deep))",
+        },
+        dc: {
+          DEFAULT: "hsl(var(--dc))",
+          glow: "hsl(var(--dc-glow))",
+          deep: "hsl(var(--dc-deep))",
+        },
+        faction: {
+          DEFAULT: "hsl(var(--faction))",
+          glow: "hsl(var(--faction-glow))",
+          deep: "hsl(var(--faction-deep))",
+        },
+        neon: {
+          yellow: "hsl(var(--neon-yellow))",
+          lime: "hsl(var(--neon-lime))",
+          pink: "hsl(var(--hot-pink))",
+        },
+        surface: {
+          elevated: "hsl(var(--surface-elevated))",
+          glass: "hsl(var(--surface-glass))",
+        },
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
