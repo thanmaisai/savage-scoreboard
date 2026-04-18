@@ -5,6 +5,8 @@ import { FactionToggle } from "@/components/cricpulse/FactionToggle";
 import { RoastCard } from "@/components/cricpulse/RoastCard";
 import { InteractionBar } from "@/components/cricpulse/InteractionBar";
 import { Ticker } from "@/components/cricpulse/Ticker";
+import { OracleCard } from "@/components/cricpulse/OracleCard";
+import { DenActivity } from "@/components/cricpulse/DenActivity";
 import { INITIAL_ROASTS, NEW_ROAST_POOL } from "@/components/cricpulse/data";
 import type { Faction, Roast } from "@/components/cricpulse/types";
 
@@ -78,6 +80,9 @@ const Index = () => {
           <FactionToggle faction={faction} onChange={setFaction} />
         </section>
 
+        {/* Den Activity ticker */}
+        <DenActivity faction={faction} />
+
         {/* Feed */}
         <section>
           <div className="flex items-end justify-between mb-3 px-1">
@@ -107,6 +112,9 @@ const Index = () => {
           Built with chai, chaos & questionable life choices.
         </p>
       </main>
+
+      {/* Oracle Challenge — collaborative prediction layer */}
+      <OracleCard />
 
       {/* Floating reaction bar */}
       <div className="fixed bottom-0 inset-x-0 z-30 px-4 pb-4 pointer-events-none">
