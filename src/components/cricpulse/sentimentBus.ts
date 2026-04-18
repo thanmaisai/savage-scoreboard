@@ -80,6 +80,11 @@ export const sentimentBus = {
 
 export const useSentiment = () => {
   const [s, setS] = useState<SentimentSnapshot>(state);
-  useEffect(() => sentimentBus.subscribe(setS), []);
+  useEffect(() => {
+    const unsub = sentimentBus.subscribe(setS);
+    return () => {
+      unsub;
+    };
+  }, []);
   return s;
 };
